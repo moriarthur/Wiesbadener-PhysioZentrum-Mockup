@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logo.svg";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,11 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-[#0891b2] font-bold text-lg">Wiesbadener PhysioZentrum</span>
+            <img
+              src={logo}
+              alt="Wiesbadener PhysioZentrum"
+              className="h-12 w-auto max-h-[48px]"
+            />
           </div>
 
           {/* Desktop Navigation */}
