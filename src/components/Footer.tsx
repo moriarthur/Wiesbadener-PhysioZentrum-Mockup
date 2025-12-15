@@ -36,7 +36,7 @@ export function Footer() {
                 <a href="https://github.com/moriarthur" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#d1d5db' }} onMouseOver={(e) => e.target.style.color = '#60a5fa'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>
                   Galart
                 </a>
-                <img src={githubMark} alt="GitHub" style={{ width: '18px', height: '18px', display: 'inline-block', filter: 'invert(100%) brightness(0.95)' }} />
+                <img src={githubMark} alt="GitHub" style={{ width: '18px', height: '18px', display: 'inline-block', filter: 'invert(100%) brightness(0.95)', pointerEvents: 'none', cursor: 'default' }} />
               </div>
               <br />
               Demo version.
@@ -73,7 +73,7 @@ export function Footer() {
                   <a href="https://github.com/moriarthur" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#d1d5db' }} onMouseOver={(e) => e.target.style.color = '#60a5fa'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>
                     Galart
                   </a>
-                  <img src={githubMark} alt="GitHub" style={{ width: '18px', height: '18px', display: 'inline-block', filter: 'invert(100%) brightness(0.95)' }} />
+                  <img src={githubMark} alt="GitHub" style={{ width: '18px', height: '18px', display: 'inline-block', filter: 'invert(100%) brightness(0.95)', pointerEvents: 'none', cursor: 'default' }} />
                 </div>
                 <br />
                 Demo version.
@@ -132,45 +132,38 @@ export function Footer() {
               alt="Telegram QR Code"
               style={{ width: '100%', height: 'auto' }}
             />
-            <p style={{ textAlign: 'center', fontSize: '0.875rem', fontWeight: '500', marginTop: '1rem', color: '#d1d5db' }}>
-              Scan to connect on Telegram
-            </p>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
-              <a
-                href="https://t.me/twor9"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: '#60a5fa',
-                  fontSize: '0.75rem',
-                  textDecoration: 'none'
-                }}
-                onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-                onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-              >
-                @twor9
-              </a>
-              <span style={{ color: '#6b7280', fontSize: '0.75rem' }}>•</span>
-              <a
-                href="https://github.com/moriarthur"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.25rem',
-                  textDecoration: 'none'
-                }}
-                onMouseOver={(e) => e.target.style.opacity = '0.8'}
-                onMouseOut={(e) => e.target.style.opacity = '1'}
-              >
-                <img
-                  src={githubMark}
-                  alt="GitHub"
-                  style={{ width: '16px', height: '16px', filter: 'invert(100%) brightness(0.95)' }}
-                />
-                <span style={{ color: '#d1d5db', fontSize: '0.75rem' }}>GitHub</span>
-              </a>
+            <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+              <span style={{ color: '#f2f2f2', fontSize: '0.875rem', fontWeight: '500' }}>Scan to connect on Telegram</span>
+              <div style={{ color: '#9ca3af', fontSize: '0.75rem', margin: '0.25rem 0' }}>or</div>
+              <div style={{ textAlign: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                <span style={{ color: '#f2f2f2', fontSize: '0.875rem', fontWeight: '500' }}>
+                  find me on
+                </span>
+                <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.25rem' }}>
+                  <a
+                    href="https://github.com/moriarthur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: '#f2f2f2',
+                      fontSize: '0.875rem',
+                      fontWeight: '500',
+                      textDecoration: 'none'
+                    }}
+                    onMouseOver={(e) => e.target.style.color = '#60a5fa'}
+                    onMouseOut={(e) => e.target.style.color = '#f2f2f2'}
+                  >
+                    GitHub
+                  </a>
+                  <img
+                    src={githubMark}
+                    alt="GitHub"
+                    style={{ width: '20px', height: '20px', filter: 'invert(100%) brightness(0.95)', cursor: 'default', display: 'inline-block', verticalAlign: 'bottom', transform: 'translateY(-3px)' }}
+                  />
+                </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
