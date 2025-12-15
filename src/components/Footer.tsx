@@ -1,6 +1,10 @@
 import qrCode from "../assets/qr_code.png";
+import githubMark from "../assets/github-mark.svg";
+import { useState } from 'react';
 
 export function Footer() {
+  const [showQrModal, setShowQrModal] = useState(false);
+
   return (
     <footer className="bg-neutral-900 text-white py-8 w-full">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,16 +20,25 @@ export function Footer() {
 
           {/* QR code and developer section */}
           <div className="flex items-center justify-center gap-4">
-            <img
-              src={qrCode}
-              alt="Telegram QR Code"
-              className="w-16 h-16 object-contain"
-            />
+            <div
+              style={{ cursor: 'pointer' }}
+              onClick={() => setShowQrModal(true)}
+            >
+              <img
+                src={qrCode}
+                alt="Telegram QR Code"
+                className="w-16 h-16 object-contain"
+              />
+            </div>
             <p className="text-neutral-400 text-sm">
-              Developed by <br />
-              <a href="https://t.me/twor9" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
-                Galart
-              </a> <br />
+              Developed by<br />
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                <a href="https://github.com/moriarthur" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#d1d5db' }} onMouseOver={(e) => e.target.style.color = '#60a5fa'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>
+                  Galart
+                </a>
+                <img src={githubMark} alt="GitHub" style={{ width: '18px', height: '18px', display: 'inline-block', filter: 'invert(100%) brightness(0.95)' }} />
+              </div>
+              <br />
               Demo version.
             </p>
           </div>
@@ -44,14 +57,25 @@ export function Footer() {
 
             {/* QR code and developer section */}
             <div className="flex flex-col items-center">
-              <img
-                src={qrCode}
-                alt="Telegram QR Code"
-                className="w-16 h-16"
-              />
+              <div
+                style={{ cursor: 'pointer' }}
+                onClick={() => setShowQrModal(true)}
+              >
+                <img
+                  src={qrCode}
+                  alt="Telegram QR Code"
+                  className="w-16 h-16"
+                />
+              </div>
               <p className="text-neutral-400 text-sm">
                 Developed by<br />
-                <a href="https://t.me/twor9" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">Galart</a> <br />
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                  <a href="https://github.com/moriarthur" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#d1d5db' }} onMouseOver={(e) => e.target.style.color = '#60a5fa'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>
+                    Galart
+                  </a>
+                  <img src={githubMark} alt="GitHub" style={{ width: '18px', height: '18px', display: 'inline-block', filter: 'invert(100%) brightness(0.95)' }} />
+                </div>
+                <br />
                 Demo version.
               </p>
             </div>
@@ -59,6 +83,98 @@ export function Footer() {
         </div>
 
       </div>
+
+      {/* QR Code Modal */}
+      {showQrModal && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 50,
+            padding: '1rem'
+          }}
+          onClick={() => setShowQrModal(false)}
+        >
+          <div
+            style={{
+              position: 'relative',
+              backgroundColor: '#111827',
+              borderRadius: '0.5rem',
+              padding: '2rem',
+              maxWidth: '24rem',
+              width: '100%'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowQrModal(false)}
+              style={{
+                position: 'absolute',
+                top: '0.5rem',
+                right: '0.5rem',
+                color: '#d1d5db',
+                fontSize: '1.875rem',
+                fontWeight: '300',
+                cursor: 'pointer',
+                background: 'none',
+                border: 'none',
+                padding: '0.25rem'
+              }}
+            >
+              ×
+            </button>
+            <img
+              src={qrCode}
+              alt="Telegram QR Code"
+              style={{ width: '100%', height: 'auto' }}
+            />
+            <p style={{ textAlign: 'center', fontSize: '0.875rem', fontWeight: '500', marginTop: '1rem', color: '#d1d5db' }}>
+              Scan to connect on Telegram
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
+              <a
+                href="https://t.me/twor9"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: '#60a5fa',
+                  fontSize: '0.75rem',
+                  textDecoration: 'none'
+                }}
+                onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+                onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+              >
+                @twor9
+              </a>
+              <span style={{ color: '#6b7280', fontSize: '0.75rem' }}>•</span>
+              <a
+                href="https://github.com/moriarthur"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.25rem',
+                  textDecoration: 'none'
+                }}
+                onMouseOver={(e) => e.target.style.opacity = '0.8'}
+                onMouseOut={(e) => e.target.style.opacity = '1'}
+              >
+                <img
+                  src={githubMark}
+                  alt="GitHub"
+                  style={{ width: '16px', height: '16px', filter: 'invert(100%) brightness(0.95)' }}
+                />
+                <span style={{ color: '#d1d5db', fontSize: '0.75rem' }}>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </footer>
   );
 }
