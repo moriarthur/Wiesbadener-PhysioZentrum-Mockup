@@ -134,12 +134,12 @@ export function Footer() {
               alt="Telegram QR Code"
               style={{ width: '100%', height: 'auto' }}
             />
-            <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+            <div style={{ textAlign: 'center', marginTop: '1rem', fontFamily: 'var(--font-sans)' }}>
               <span style={{ color: '#f2f2f2', fontSize: '0.875rem', fontWeight: '500' }}>Scan to connect on Telegram</span>
               <div style={{ color: '#9ca3af', fontSize: '0.75rem', margin: '0.25rem 0' }}>or</div>
               <div style={{ textAlign: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                <span style={{ color: '#f2f2f2', fontSize: '0.875rem', fontWeight: '500' }}>
+                <span style={{ color: '#f2f2f2', fontSize: '0.875rem', fontWeight: '500', fontFamily: 'var(--font-sans)' }}>
                   find me on
                 </span>
                 <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.25rem' }}>
@@ -151,7 +151,8 @@ export function Footer() {
                       color: '#f2f2f2',
                       fontSize: '0.875rem',
                       fontWeight: '500',
-                      textDecoration: 'none'
+                      textDecoration: 'none',
+                      fontFamily: 'var(--font-sans)'
                     }}
                     onMouseOver={(e) => e.target.style.color = '#60a5fa'}
                     onMouseOut={(e) => e.target.style.color = '#f2f2f2'}

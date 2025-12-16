@@ -241,8 +241,8 @@ export function Contact() {
                   }}
                 />
                 <div>
-                  <h4 style={{ color: '#14532d', fontWeight: 600 }}>Nachricht erfolgreich gesendet!</h4>
-                  <p style={{ color: '#15803d', marginTop: '4px' }}>
+                  <h4 style={{ color: '#14532d', fontWeight: 600, fontFamily: 'var(--font-sans)' }}>Nachricht erfolgreich gesendet!</h4>
+                  <p style={{ color: '#15803d', marginTop: '4px', fontFamily: 'var(--font-sans)' }}>
                     Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze mit Ihnen in Verbindung setzen!
                   </p>
                 </div>

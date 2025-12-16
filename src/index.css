@@ -1,3 +1,61 @@
+/* SF Pro Font Imports */
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 100;
+    src: local("SF Pro Display Ultralight");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 200;
+    src: local("SF Pro Display Thin");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 300;
+    src: local("SF Pro Display Light");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    src: local("SF Pro Display Regular");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    src: local("SF Pro Display Medium");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    src: local("SF Pro Display Semibold");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    src: local("SF Pro Display Bold");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    src: local("SF Pro Display Heavy");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 900;
+    src: local("SF Pro Display Black");
+  }
+}
+
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
@@ -34,8 +92,8 @@
 
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-sans: "SF Pro Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: "SF Mono", ui-monospace, SFMono-Regular, "Cascadia Code", "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
     --color-gray-100: oklch(.967 .003 264.542);
     --color-neutral-50: oklch(.985 0 0);
     --color-neutral-200: oklch(.922 0 0);
@@ -338,6 +396,9 @@
     color: var(--foreground);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
 
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h1 {
