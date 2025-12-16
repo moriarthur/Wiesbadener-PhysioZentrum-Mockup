@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logo.svg";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
-              src="/src/assets/logo.svg"
+              src={logo}
               alt="Wiesbadener PhysioZentrum"
               style={{ height: '40px', width: 'auto', maxWidth: '225px' }}
             />

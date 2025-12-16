@@ -28,9 +28,10 @@ export function Footer() {
                 src={qrCode}
                 alt="Telegram QR Code"
                 className="w-16 h-16 object-contain"
+                loading="lazy"
               />
             </div>
-            <p className="text-neutral-400 text-sm">
+            <div className="text-neutral-400 text-sm">
               Developed by<br />
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                 <a href="https://github.com/moriarthur" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#d1d5db' }} onMouseOver={(e) => e.target.style.color = '#60a5fa'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>
@@ -40,7 +41,7 @@ export function Footer() {
               </div>
               <br />
               Demo version.
-            </p>
+            </div>
           </div>
         </div>
 
@@ -65,9 +66,10 @@ export function Footer() {
                   src={qrCode}
                   alt="Telegram QR Code"
                   className="w-16 h-16"
+                  loading="lazy"
                 />
               </div>
-              <p className="text-neutral-400 text-sm">
+              <div className="text-neutral-400 text-sm">
                 Developed by<br />
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                   <a href="https://github.com/moriarthur" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#d1d5db' }} onMouseOver={(e) => e.target.style.color = '#60a5fa'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>
@@ -77,7 +79,7 @@ export function Footer() {
                 </div>
                 <br />
                 Demo version.
-              </p>
+              </div>
             </div>
           </div>
         </div>

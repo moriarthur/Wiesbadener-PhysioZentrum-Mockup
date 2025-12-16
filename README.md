@@ -33,6 +33,12 @@ npm run build
 
 Die optimierten Dateien werden im `build`-Ordner abgelegt.
 
+### Production Build testen
+
+```bash
+npm run preview
+```
+
 ## Technologie-Stack
 
 - **Frontend**: React 18 mit TypeScript
@@ -40,16 +46,3 @@ Die optimierten Dateien werden im `build`-Ordner abgelegt.
 - **Build-Tool**: Vite 6
 - **Icons**: Lucide React
 
-## Kontakt
-
-Wiesbadener PhysioZentrum
-Wilhelmstraße 45
-65183 Wiesbaden
-Deutschland
-
-Tel: +49 611 1234567
-E-Mail: info@physiozentrum-wiesbaden.de
-
-Öffnungszeiten:
-Montag - Freitag: 08:00 - 19:00 Uhr
-Samstag: 09:00 - 17:00 Uhr

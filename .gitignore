@@ -118,8 +118,5 @@ temp/
 # Vite
 .vite/
 
-# Windows Zone.Identifier files
-*:Zone.Identifier
-
 # Claude Code files
 .claude/
