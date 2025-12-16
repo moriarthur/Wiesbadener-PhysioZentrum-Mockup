@@ -15,6 +15,12 @@ export default defineConfig({
     target: 'esnext',
     outDir: 'build',
     sourcemap: false,
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   server: {
     port: 3000,
